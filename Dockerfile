@@ -8,7 +8,9 @@ LABEL maintainer="Alain Hélaïli <helaili@github.com>"
 RUN apk add --no-cache git build-base
 # Allow for timezone setting in _config.yml
 RUN apk add --update tzdata
-RUN apk --update add imagemagick
+RUN apk add --update --no-cache build-base imagemagick6 imagemagick6-c++ \
+    imagemagick6-dev imagemagick6-libs
+RUN gem install rmagick
 
 # debug
 RUN bundle version
