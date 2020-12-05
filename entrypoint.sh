@@ -69,7 +69,7 @@ if [ -n "${INPUT_REBUILD_COUNT}" ]; then
   REBUILD_COUNT="${INPUT_REBUILD_COUNT}"
 fi
 
-for ((i=1; i<=REBUILD_COUNT; i++)); do
+for num in $(seq 1 $REBUILD_COUNT); do
   JEKYLL_ENV=production bundle exec ${BUNDLE_ARGS} jekyll build -s ${GITHUB_WORKSPACE}/${JEKYLL_SRC} -d build ${VERBOSE}
   echo "Jekyll build done"
 done
