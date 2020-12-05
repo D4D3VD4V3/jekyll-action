@@ -10,6 +10,9 @@ inputs:
   target_branch:
     description: 'The target branch name the sources get pushed to'
     required: false
+  rebuild_count:
+    description: 'The number of times to rebuild the Jekyll site'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
