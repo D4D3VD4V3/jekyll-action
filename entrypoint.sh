@@ -64,8 +64,15 @@ else
   echo "::debug::Jekyll debug is off"
 fi
 
-JEKYLL_ENV=production bundle exec ${BUNDLE_ARGS} jekyll build -s ${GITHUB_WORKSPACE}/${JEKYLL_SRC} -d build ${VERBOSE}
-echo "Jekyll build done"
+REBUILD_COUNT=1
+if [ -n "${INPUT_REBUILD_COUNT}"]; then
+  REBUILD_COUNT="${INPUT_REBUILD_COUNT}"
+fi
+
+for ((i=1; i<=REBUILD_COUNT; i++)); do
+  JEKYLL_ENV=production bundle exec ${BUNDLE_ARGS} jekyll build -s ${GITHUB_WORKSPACE}/${JEKYLL_SRC} -d build ${VERBOSE}
+  echo "Jekyll build done"
+done
 
 cd build
 
