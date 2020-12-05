@@ -65,7 +65,7 @@ else
 fi
 
 REBUILD_COUNT=1
-if [ -n "${INPUT_REBUILD_COUNT}"]; then
+if [ -n "${INPUT_REBUILD_COUNT}" ]; then
   REBUILD_COUNT="${INPUT_REBUILD_COUNT}"
 fi
 
