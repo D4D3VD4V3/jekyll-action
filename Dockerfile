@@ -9,7 +9,7 @@ RUN apk add --no-cache git build-base
 # Allow for timezone setting in _config.yml
 RUN apk add --update tzdata
 RUN apk add --update --no-cache build-base imagemagick6 imagemagick6-c++ \
-    imagemagick6-dev imagemagick6-libs
+    imagemagick6-dev imagemagick6-libs libwebp libwebp-tools
 RUN gem install rmagick
 
 # debug
