@@ -54,6 +54,8 @@ bundle config path "$PWD/vendor/bundle"
 echo "::debug::Bundle config set succesfully"
 bundle install --path="$PWD/vendor/bundle"
 bundle info jekyll-webp
+ls -la /github/workspace/vendor/bundle/ruby/2.7.0/gems/jekyll-webp-1.0.0
+ls -la /github/workspace/vendor/bundle/ruby/2.7.0/gems/jekyll-webp-1.0.0/bin
 echo "::debug::Completed bundle install"
 
 VERBOSE=""
