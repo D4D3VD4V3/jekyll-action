@@ -9,7 +9,6 @@ RUN apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y git && \
-  apt-get install -y tzdata && \
   apt-get install -y imagemagick && \
   apt-get install -y libmagickwand-dev
 
