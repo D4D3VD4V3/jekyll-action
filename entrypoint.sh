@@ -53,6 +53,7 @@ cd $GEM_SRC
 bundle config set deployment true
 bundle config path "$PWD/vendor/bundle"
 bundle install
+gem which jekyll-webp
 echo "::debug::Completed bundle install"
 
 VERBOSE=""
