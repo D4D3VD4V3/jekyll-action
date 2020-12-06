@@ -17,6 +17,7 @@ RUN gem install rmagick
 RUN gem install jekyll-webp
 
 # debug
+RUN gem which jekyll-webp
 RUN bundle version
 
 COPY LICENSE README.md /
