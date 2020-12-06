@@ -14,10 +14,8 @@ RUN apk add --update --no-cache build-base imagemagick6 imagemagick6-c++ \
 RUN bundle config set path 'vendor/bundle'
 
 RUN gem install rmagick
-RUN gem install jekyll-webp
 
 # debug
-RUN gem which jekyll-webp
 RUN bundle version
 
 COPY LICENSE README.md /
