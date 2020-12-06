@@ -5,7 +5,7 @@ LABEL repository="https://github.com/helaili/jekyll-action"
 LABEL homepage="https://github.com/helaili/jekyll-action"
 LABEL maintainer="Alain Hélaïli <helaili@github.com>"
 
-RUN apt-get install -y build-essential && \
+RUN apt-get update && apt-get install -y build-essential && \
   apt-get install -y git && \
   apt-get install -y imagemagick && \
   apt-get install -y libmagickwand-dev
