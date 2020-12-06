@@ -10,7 +10,7 @@ RUN apk add --no-cache git build-base
 RUN apk add --update tzdata
 RUN apk add --update --no-cache build-base imagemagick6 imagemagick6-c++ \
     imagemagick6-dev imagemagick6-libs \
-    jpeg-dev libpng-dev tiff-dev giflib-dev libwebp-dev
+    jpeg-dev jpeg libpng-dev libpng tiff-dev tiff giflib-dev giflib libwebp-dev libwebp
 RUN gem install rmagick
 
 # debug
