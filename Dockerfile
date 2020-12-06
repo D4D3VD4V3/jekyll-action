@@ -1,15 +1,17 @@
-FROM ruby:2.7-alpine
+FROM ubuntu:latest
 
 LABEL version="2.0.1"
 LABEL repository="https://github.com/helaili/jekyll-action"
 LABEL homepage="https://github.com/helaili/jekyll-action"
 LABEL maintainer="Alain Hélaïli <helaili@github.com>"
 
-RUN apk add --no-cache git build-base
-# Allow for timezone setting in _config.yml
-RUN apk add --update tzdata
-RUN apk add --update --no-cache build-base imagemagick6 imagemagick6-c++ \
-    imagemagick6-dev imagemagick6-libs
+RUN apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y git && \
+  apt-get install -y tzdata && \
+  apt-get install -y imagemagick && \
+  apt-get install -y libmagickwand-dev
 
 RUN gem install rmagick
 
